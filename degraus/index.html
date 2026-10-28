@@ -89,6 +89,10 @@
   .proximo h2{color:#fff}
   .proximo p{color:#DCE6F7;margin:0}
 
+  .prompt{border:1px solid var(--linha);border-radius:14px;padding:18px;margin:16px 0}
+  .prompt pre{white-space:pre-wrap;word-wrap:break-word;background:var(--fundo-2);border-radius:10px;padding:14px;margin:10px 0 12px;font:400 15px/1.55 Inter,system-ui,sans-serif;color:var(--azul-escuro)}
+  .btn{display:inline-block;background:var(--laranja);color:var(--azul-escuro);font:700 15px "Plus Jakarta Sans",sans-serif;border:0;border-radius:10px;padding:11px 18px;cursor:pointer;text-decoration:none}
+  .btn:hover{filter:brightness(.95)} .btn.grande{font-size:17px;padding:14px 24px}
   footer{padding:28px 0 48px;font-size:14px;color:var(--cinza-claro)}
   .assina{font:700 16px "Plus Jakarta Sans",sans-serif;color:var(--azul);border-bottom:3px solid var(--laranja);padding-bottom:2px}
   @media (max-width:520px){.degrau{grid-template-columns:1fr}.num{width:56px;height:56px;font-size:26px}.proximo{padding:24px}}
@@ -111,7 +115,7 @@
     <h2>Como usar em 3 passos</h2>
     <div class="passos">
       <div class="passo"><h3>Assista ao vídeo</h3><p>São poucos minutos e mostram, na tela, cada clique dos 3 degraus.</p></div>
-      <div class="passo"><h3>Monte os degraus</h3><p>Siga o passo a passo abaixo. Comece pelo degrau 1 e suba um por semana, se preferir.</p></div>
+      <div class="passo"><h3>Monte os degraus</h3><p>Siga o passo a passo abaixo e use os comandos prontos para a IA escrever o texto de cada degrau. Suba um degrau por semana, se preferir.</p></div>
       <div class="passo"><h3>Faça a conta</h3><p>Use a calculadora no fim para medir o custo de cada venda, não de cada lead.</p></div>
     </div>
   </section>
@@ -203,7 +207,7 @@
   </section>
 
   <section id="sinais">
-    <div class="eyebrow">Item 3</div>
+    <div class="eyebrow">Bônus</div>
     <h2>Os sinais de que um lead está pronto para falar com o vendedor</h2>
     <p>Marque o que vale para o último lead que chegou no seu WhatsApp:</p>
     <ul class="sinais" id="listaSinais">
@@ -215,6 +219,62 @@
       <li><input type="checkbox" id="s6"><label for="s6">Ele voltou a falar com você mais de uma vez, ou cita um conteúdo seu.</label></li>
     </ul>
     <div class="placar" id="placar" style="background:var(--fundo-2);color:var(--azul)">Marque os sinais para ver a leitura.</div>
+  </section>
+
+  <section id="prompts">
+    <div class="eyebrow">Item 3</div>
+    <h2>5 comandos prontos para a IA escrever cada degrau</h2>
+    <p>Copie, troque o que está entre [colchetes] e cole no assistente de IA que você já usa. Depois leia tudo e ajuste com a sua voz: a IA ajuda a escrever, quem decide é você.</p>
+
+    <div class="prompt">
+      <span class="tag">Degrau 1 · quem deve ver</span>
+      <h3>1. Público do primeiro anúncio</h3>
+      <pre>Você é um estrategista de anúncios para empresas B2B. Eu vendo [o que você vende] para [cargo de quem decide, ex.: diretor comercial] de empresas de [setor] em [cidade ou região].
+Liste 15 interesses, cargos e assuntos que essa pessoa costuma seguir ou pesquisar, para eu usar na segmentação do anúncio.
+Depois liste 5 interesses que parecem certos mas trazem gente fora do perfil, e explique em uma frase por quê.
+Use linguagem simples e sem sigla.</pre>
+      <button class="btn copiar" type="button">Copiar comando</button>
+    </div>
+
+    <div class="prompt">
+      <span class="tag">Degrau 1 · conhecer</span>
+      <h3>2. Vídeos curtos para quem nunca ouviu falar de você</h3>
+      <pre>Escreva 3 roteiros de vídeo de até 60 segundos para eu gravar com o celular.
+Tema: [problema que o seu cliente vive, ex.: lead que chega e não compra].
+Cada roteiro tem: (1) um gancho de uma frase, com uma cena real; (2) o que acontece e por que acontece, em 2 ou 3 frases; (3) o que a pessoa deve olhar primeiro.
+Sem oferta, sem preço, sem sigla. O objetivo é fazer a pessoa querer ver o próximo vídeo.</pre>
+      <button class="btn copiar" type="button">Copiar comando</button>
+    </div>
+
+    <div class="prompt">
+      <span class="tag">Degrau 2 · confiar</span>
+      <h3>3. Vídeos para quem já te conhece</h3>
+      <pre>Com base nos 3 roteiros acima, escreva 3 vídeos de até 90 segundos para quem já me conhece.
+Cada um mostra como eu penso o problema: [seu jeito de resolver, em uma frase] e o erro mais comum de quem tenta resolver sozinho.
+Tom de quem explica com calma, sem vender.
+Termine cada vídeo com uma pergunta que a pessoa possa responder pensando na própria empresa.</pre>
+      <button class="btn copiar" type="button">Copiar comando</button>
+    </div>
+
+    <div class="prompt">
+      <span class="tag">Degrau 3 · conversar</span>
+      <h3>4. O convite para o WhatsApp e a primeira mensagem</h3>
+      <pre>Escreva 3 versões de um anúncio curto (até 3 linhas) que convida a pessoa a falar comigo no WhatsApp. Ele será mostrado só para quem já assistiu aos meus vídeos.
+Problema que eu resolvo: [problema].
+Depois escreva a primeira mensagem que eu mando quando a pessoa chamar: 2 ou 3 linhas, uma única pergunta sobre a situação da empresa dela, e espaço para ela dizer que não é o momento. Sem preço.</pre>
+      <button class="btn copiar" type="button">Copiar comando</button>
+    </div>
+
+    <div class="prompt">
+      <span class="tag">Toda semana · ler o resultado</span>
+      <h3>5. Descobrir em qual degrau o lead se perde</h3>
+      <pre>Estes são os números do último mês da minha campanha, degrau por degrau: [cole aqui o investimento, o alcance, as visualizações de vídeo, as mensagens recebidas e as vendas fechadas].
+Diga em qual degrau a pessoa mais se perde e o que eu devo testar primeiro. Dê no máximo 2 ações, em linguagem simples.
+Se faltar dado para concluir, diga o que falta em vez de supor.</pre>
+      <button class="btn copiar" type="button">Copiar comando</button>
+    </div>
+
+    <p class="aviso"><strong>Quando não confiar na resposta:</strong> se a IA citar um número que você não passou, ou afirmar algo sobre o seu mercado sem mostrar de onde veio, ignore essa parte e confira com os seus dados.</p>
   </section>
 
   <section id="conta">
@@ -253,7 +313,8 @@
 
   <div class="proximo">
     <h2>O próximo passo</h2>
-    <p>Se quiser olhar isso junto, na sua empresa, é só pedir uma conversa de 20 minutos.</p>
+    <p>Montou os degraus e quer olhar o seu caso junto? Escolha um horário para uma análise gratuita de 40 minutos comigo.</p>
+    <p style="margin-top:20px"><a class="btn grande" href="https://cal.com/maiky-miguel-rh5mjb/40min" target="_blank" rel="noopener">Marcar uma conversa de 40 minutos</a></p>
   </div>
 
 </main>
@@ -293,6 +354,13 @@
     else { p.textContent = n+' de 6: lead frio. Ele chegou cedo demais; o vendedor está fazendo papel de filtro.'; p.style.background='#FBE5E3'; p.style.color='var(--vermelho)'; }
   }
   document.querySelectorAll('#listaSinais input').forEach(i => i.addEventListener('change', sinais));
+
+  document.querySelectorAll('.copiar').forEach(b => b.addEventListener('click', () => {
+    const pre = b.parentElement.querySelector('pre');
+    const ok = () => { b.textContent = 'Copiado'; setTimeout(() => b.textContent = 'Copiar comando', 1800); };
+    const manual = () => { const r = document.createRange(); r.selectNodeContents(pre); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Selecionado: aperte Ctrl+C'; };
+    if (navigator.clipboard) navigator.clipboard.writeText(pre.innerText).then(ok).catch(manual); else manual();
+  }));
 </script>
 </body>
 </html>
